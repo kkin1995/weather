@@ -1,7 +1,8 @@
 import requests
-import secrets
+from decouple import config
 
-secret_key = secrets.api_key
+secret_key = config('api_key')
+
 
 url_for_location_key = "http://dataservice.accuweather.com/locations/v1/cities/search"
 language = "en-us"
